@@ -170,6 +170,10 @@ Swipe Down Half
 
 Swipe Down
     Execute JavaScript  window.scrollBy(0,1500);
+    
+Equal For Basket
+    ${basket_text} =  Get Text  ${selector}
+    Should Be Equal  ${basket_text}  Tükendi
 
 *** Test Cases ***
 searchBarControl
