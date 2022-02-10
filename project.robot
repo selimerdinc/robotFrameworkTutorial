@@ -56,9 +56,14 @@ ${telephoneMemory}  xpath://ul/div[last()]
 ${campaignPhotos}  xpath://div[@class="psxmjs-0 jTNdHi"]
 ${sortFilter}   xpath://select[@aria-label="Sıralama filtresi"]
 ${selectedValue}   xpath://option[@value="hpa"]
-
+${text}     selimerdincselimerdinc
 
 *** Keywords ***
+Find Digit  
+    [Arguments]  ${text}
+    ${digit} =  Get Regexp Matches  ${text}  \\d+
+    [Return] =  ${digit}
+
 create browser
     open browser  about:blank  ${browser}
     Set Selenium Timeout  ${TIMEOUT}
